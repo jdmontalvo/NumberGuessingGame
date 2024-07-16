@@ -81,3 +81,9 @@ do
   fi
   UPDATE_USER_RESULT=$($PSQL "UPDATE users SET games_played=$NEW_GAMES_PLAYED, best_game=$NEW_BEST_GAME WHERE user_id=$USER_ID;")
 done
+# Validar que la adivinanza sea un número entero
+while ! [[ $GUESS =~ ^[0-9]+$ ]]
+do
+  echo "That is not an integer, guess again:"
+  read GUESS
+done
