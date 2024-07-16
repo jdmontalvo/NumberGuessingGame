@@ -68,7 +68,7 @@ guess_number() {
 
 # Llamar a la función para adivinar el número
 guess_number
-
+ 
 # Actualizar la base de datos con los resultados del juego
 echo "$USER_INFO" | while IFS="|" read USER_ID GAMES_PLAYED BEST_GAME
 do
